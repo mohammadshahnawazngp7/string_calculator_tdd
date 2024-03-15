@@ -9,6 +9,10 @@ class StringCalculator < ApplicationRecord
 
     numbers.gsub!("\n", delimiter)
 
+    numbers.split(delimiter).map(&:to_i).each do |num|
+      raise "negatives not allowed: #{num}" if num.negative?
+    end
+
     numbers.split(delimiter).map(&:to_i).sum
   end
 end
