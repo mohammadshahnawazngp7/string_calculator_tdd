@@ -1,24 +1,43 @@
-# README
+## String Calculator TDD Kata     
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the String Calculator TDD Kata! This assessment is designed to evaluate your skills in Test-Driven Development (TDD) by implementing a simple string calculator with various features.    
 
-Things you may want to cover:
+### Set up the project
+### Clone the repository:
+`git clone https://github.com/mohammadshahnawazngp7/string_calculator_tdd.git`
 
-* Ruby version
+### Change into the project directory:   
+`cd string_calculator_tdd`
 
-* System dependencies
+### Install Dependencies:    
+`bundle install`  
+`rails db:create`
 
-* Configuration
+`rails db:migrate`
 
-* Database creation
+### Run the Server:
+`rails server`   
+or  
+`rails s`
 
-* Database initialization
+### Add RSpec to the Gemfile:
+Open your project's Gemfile and add the rspec-rails gem to the :development, :test group.  
 
-* How to run the test suite
+`gem 'rspec-rails'`  
+`bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Initialize RSpec:
+`rails generate rspec:install`
 
-* Deployment instructions
+### Run RSpec:
+You can now run RSpec to execute your tests.
 
-* ...
+`rspec`  
+or   
+`rspec spec/models`    
+
+
+### Contributing
+Your contributions to the project are highly welcomed! Feel free to participate by submitting issues or pull requests. Your feedback and suggestions are valuable.
+
+Happy Coding! 🚀
