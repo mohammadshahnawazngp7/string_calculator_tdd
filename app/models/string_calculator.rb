@@ -13,6 +13,6 @@ class StringCalculator < ApplicationRecord
       raise "negatives not allowed: #{num}" if num.negative?
     end
 
-    numbers.split(delimiter).map(&:to_i).sum
+    numbers.split(delimiter).map(&:to_i).reject { |num| num > 1000 }.sum
   end
 end
