@@ -5,6 +5,9 @@ class StringCalculator < ApplicationRecord
     if numbers.start_with?("//")
       delimiter_line, numbers = numbers.split("\n", 2)
       delimiter = delimiter_line[2..-1]
+      if delimiter.start_with?("[") && delimiter.end_with?("]")
+        delimiter = delimiter[1..-2] # remove brackets
+      end
     end
 
     numbers.gsub!("\n", delimiter)
