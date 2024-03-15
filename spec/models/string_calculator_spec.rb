@@ -49,5 +49,11 @@ RSpec.describe StringCalculator, type: :model do
         expect(StringCalculator.add("//[*][%]\n1*2%3")).to eq(6)
       end
     end
+
+    context 'when given multiple delimiters with length longer than one char' do
+      it 'returns the sum of the numbers' do
+        expect(StringCalculator.add("//[***][%%%]\n1***2%%%3")).to eq(6)
+      end
+    end
   end
 end

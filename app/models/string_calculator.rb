@@ -9,6 +9,7 @@ class StringCalculator < ApplicationRecord
         delimiter = delimiter[1..-2].split('][')
       elsif delimiter.start_with?("[") && delimiter.end_with?("]")
         delimiter = delimiter[1..-2] # remove brackets
+        delimiter = delimiter.split('][')
       end
     end
 
